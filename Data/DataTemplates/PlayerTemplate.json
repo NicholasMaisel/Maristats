@@ -1,0 +1,21 @@
+{
+  "player_name": "first last!",
+  "school": "",
+  "Pos": "",
+  "PTS": 0,
+  "FGM": 0,
+  "FGA": 0,
+  "FG%": 0,
+  "3FGM": 0,
+  "3FGA": 0,
+  "3FG%": 0,
+  "AST": 0,
+  "FTA": 0,
+  "FTM": 0,
+  "FT%":0,
+  "STL": 0,
+  "BLK": 0,
+  "PF": 0,
+  "REB": 0,
+  "shots": []
+}
