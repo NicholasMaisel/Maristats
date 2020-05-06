@@ -44,10 +44,10 @@ class GameLogger(wx.Frame):
         self.date_selector = wx.adv.DatePickerCtrl(self.panel, id=-1)
 
         # Add Elements to sizer
-        self.team_selection_sizer.Add(self.home_team_selector, flag = wx.ALIGN_LEFT|wx.EXPAND)
-        self.team_selection_sizer.Add(self.away_team_selector, flag = wx.ALIGN_CENTER|wx.EXPAND)
-        self.team_selection_sizer.Add(self.date_selector, flag = wx.ALIGN_RIGHT|wx.EXPAND)
-        self.team_selection_sizer.Add(self.create_log_btn, flag = wx.ALIGN_RIGHT|wx.EXPAND)
+        self.team_selection_sizer.Add(self.home_team_selector, flag = wx.EXPAND)
+        self.team_selection_sizer.Add(self.away_team_selector, flag = wx.EXPAND)
+        self.team_selection_sizer.Add(self.date_selector, flag = wx.EXPAND)
+        self.team_selection_sizer.Add(self.create_log_btn, flag = wx.EXPAND)
 
         # Event Bindings
         self.Bind(wx.EVT_COMBOBOX, self.select_team, self.home_team_selector)
@@ -69,7 +69,7 @@ class GameLogger(wx.Frame):
         self.shot_status_label = wx.StaticText(self.panel, -1, label="Shot Made:")
         self.shot_status_value = wx.StaticText(self.panel, -1, label="Missed")
         self.stat_sizer.Add(self.stat_selector, flag=wx.EXPAND)
-        self.stat_button_sizer.Add(self.submit_button,flag = wx.ALIGN_CENTER|wx.EXPAND)
+        self.stat_button_sizer.Add(self.submit_button,flag = wx.EXPAND)
         self.stat_button_sizer.Add(self.clear_button,flag = wx.EXPAND)
         self.stat_button_sizer.Add(self.push_log_btn,flag=wx.EXPAND)
         self.Bind(wx.EVT_BUTTON, self.SubmitClicked, self.submit_button)
