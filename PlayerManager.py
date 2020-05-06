@@ -157,8 +157,6 @@ class ManagePlayer(wx.Panel):
         try:
             if self.original_school != player_data['school']:
                 #remove player from old team
-                print('old',self.teams_dict[self.original_school])
-                print('new',self.teams_dict[player_data['school']])
                 self.data_manager.remove_team_player(self.teams_dict[self.original_school], player_file)
                 #add player to new team_data
                 self.data_manager.add_team_player(self.teams_dict[player_data['school']], player_file)

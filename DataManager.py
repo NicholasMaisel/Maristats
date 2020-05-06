@@ -68,11 +68,11 @@ class DataManager():
         try:
             player_data['FG%'] = fgm/fga
         except:
-            player_data['FG%'] = "err: division by 0. FGA is 0"
+            player_data['FG%'] = 0.0
         try:
             player_data['3FG%'] = pm3/pa3
         except:
-            player_data['3FG%'] = "err: division by 0. 3FGA is 0"
+            player_data['3FG%'] = 0.0
         return(player_data)
 
     def update_player_attribute(self, player_file, updates):
