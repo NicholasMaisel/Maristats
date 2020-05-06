@@ -240,7 +240,7 @@ class DataManager():
                         player_data['3FGA'] += 1
                         print(row['status'])
                         if row['status'] == 1:
-                            player_data['FGM'] += 1
+                            player_data['3FGM'] += 1
 
                 elif row['stat'] == 'FT':
                     shot = {'shot_type':'FT',
