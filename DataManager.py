@@ -234,18 +234,17 @@ class DataManager():
 
                     if row['stat'] == '2PT':
                         player_data['FGA'] += 1
-                        if row['status'] == 1:
+                        if row['status'] == '1':
                             player_data['FGM'] += 1
                     if row['stat'] == '3PT':
                         player_data['3FGA'] += 1
-                        print(row['status'])
-                        if row['status'] == 1:
+                        if row['status'] == '1':
                             player_data['3FGM'] += 1
 
                 elif row['stat'] == 'FT':
                     shot = {'shot_type':'FT',
                             'status': row.pop('status')}
-                    if row['status'] == 1:
+                    if row['status'] == '1':
                         player_data['FGM'] += 1
 
                     player_data['shots'].append(shot)
