@@ -17,3 +17,13 @@ To Log a game:
   - Finally, once all of the shots and stats are entered for the game simply click the "Push to Log" Button.
     + This button will read the log file and update the individual player files with the stats entered.
 
+
+To export stats:
+  To use the export script, open up a command line interface in the project folder.
+  use python to run export.py with the following argument options:
+      - To get a csv of all player stats
+        export.py -p -o [FILENAME]
+      - To export all shots from all players
+        export.py -s -o [FIELDNAME]
+
+  The exported reports can be found in the DataExports folder.

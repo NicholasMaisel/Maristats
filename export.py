@@ -7,13 +7,13 @@ def main():
     dm = DataManager.DataManager()
     text = "This is a tool to export data from the Maristats applicaiton."
     parser = argparse.ArgumentParser(description=text)
-    parser.add_argument("-p", "--player", help="""Export player stats""")
+    parser.add_argument("-p", help="""Export player stats""", action="store_true")
     parser.add_argument("-s", help="Export Shots file", action='store_true')
     parser.add_argument("-o", "--output", help="file name of export")
 
     args = parser.parse_args()
     print(args)
-    if args.player and not args.s:
+    if args.p:
         stats_list = []
         pd = dm.load_players_dict()
         for player in pd:
@@ -34,7 +34,7 @@ def main():
             f.close()
 
 
-    elif args.player and args.s:
+    elif args.s:
         stats_list = []
         pd = dm.load_players_dict()
         for player in pd:
