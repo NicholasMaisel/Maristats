@@ -19,10 +19,11 @@ To Log a game:
 
 
 To export stats:
-  To use the export script, open up a command line interface in the project folder.\n
-  use python to run export.py with the following argument options:
+Use python to run export.py with the following argument options:
+
       - To get a csv of all player stats
         export.py -p -o [FILENAME]
+
       - To export all shots from all players
         export.py -s -o [FIELDNAME]
 
