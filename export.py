@@ -37,19 +37,22 @@ def main():
     elif args.s:
         stats_list = []
         pd = dm.load_players_dict()
+        print(pd)
         for player in pd:
             if player != "":
+                print(dm.read_player_data(pd[player]))
                 data = dict(dm.read_player_data(pd[player])).pop('shots')
                 for shot in data:
                     shot['player'] = player
                     stats_list.append(shot)
 
         if args.output:
-            file_name = 'DataExports/'+args.output + '.csv'
+            file_name = 'DataExports/'+ args.output + '.csv'
         else:
             file_name = 'DataExports/' + 'playerStats.csv'
 
-        with open('DataExports/'+args.output + '.csv', 'w') as f:
+        with open('DataExports/'+ args.output + '.csv', 'w') as f:
+            print(stats_list)
             writer = csv.DictWriter(f, stats_list[0])
             writer.writeheader()
             for i in stats_list:
